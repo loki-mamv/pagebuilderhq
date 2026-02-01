@@ -377,6 +377,33 @@
   </section>
 
   <!-- ============================================================
+       EMAIL CAPTURE
+       ============================================================ -->
+  <section class="section section--email" id="email-capture">
+    <div class="container">
+      <div class="email-capture reveal">
+        <div class="email-capture__content">
+          <div class="email-capture__label">Free Template</div>
+          <h2 class="email-capture__title">Get a free landing page template.</h2>
+          <p class="email-capture__text">A production-ready HTML template you can use today. No strings, no credit card. Just a good starting point.</p>
+        </div>
+        <form class="email-capture__form" id="captureForm">
+          <div class="email-capture__fields">
+            <input type="text" name="name" placeholder="Your name" class="email-capture__input" autocomplete="given-name">
+            <input type="email" name="email" placeholder="you@email.com" class="email-capture__input" required autocomplete="email">
+          </div>
+          <button type="submit" class="email-capture__btn" id="captureBtn">
+            Get Free Template
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </button>
+          <p class="email-capture__note">No spam. Just the template and occasional updates.</p>
+        </form>
+        <div class="email-capture__status" id="captureStatus" style="display:none;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        PRICING
        ============================================================ -->
   <section class="section section--pricing" id="pricing">
@@ -565,7 +592,11 @@
           <a href="#templates">Templates</a>
           <a href="#pricing">Pricing</a>
           <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer__ecosystem">
+          <span class="footer__ecosystem-label">Also by Loki</span>
           <a href="https://htmldecks.com" target="_blank" rel="noopener">HTML Decks</a>
+          <a href="https://emailkits.com" target="_blank" rel="noopener">EmailKits</a>
           <a href="https://hireloki.com" target="_blank" rel="noopener">Hire Loki</a>
         </div>
         <p class="footer__copy">Built by <a href="https://hireloki.com" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.35); text-decoration: underline; text-underline-offset: 3px;">Loki</a> &middot; Part of <a href="https://mamv.co" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.35); text-decoration: underline; text-underline-offset: 3px;">MAMV Ventures</a></p>
@@ -671,6 +702,47 @@
         }
       });
     });
+
+    // --- Email Capture Form ---
+    var captureForm = document.getElementById('captureForm');
+    var captureBtn = document.getElementById('captureBtn');
+    var captureStatus = document.getElementById('captureStatus');
+    var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxUkZV2hLhLq9zMkIueQzeiPKZUx8_4E8gyUF1t0Q3VHJXSxp6ZRVSXVMgcMdT4fdU/exec';
+
+    if (captureForm) {
+      captureForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var email = captureForm.querySelector('input[name="email"]').value.trim();
+        var name = captureForm.querySelector('input[name="name"]').value.trim();
+        if (!email) return;
+
+        captureBtn.textContent = 'Sending...';
+        captureBtn.disabled = true;
+
+        fetch(APPS_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: email,
+            name: name,
+            product: 'pagebuilderhq',
+            source: 'website'
+          })
+        }).then(function() {
+          captureStatus.style.display = 'block';
+          captureStatus.className = 'email-capture__status email-capture__status--success';
+          captureStatus.textContent = "You're in. Check your email for the template.";
+          captureForm.style.display = 'none';
+        }).catch(function() {
+          captureStatus.style.display = 'block';
+          captureStatus.className = 'email-capture__status email-capture__status--error';
+          captureStatus.textContent = 'Something went wrong. Please try again.';
+          captureBtn.textContent = 'Get Free Template';
+          captureBtn.disabled = false;
+        });
+      });
+    }
 
   })();
   </script>
