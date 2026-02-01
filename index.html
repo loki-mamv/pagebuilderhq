@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PageBuilderHQ — Landing Pages That Don't Look Like Landing Pages</title>
+  <meta name="description" content="Pick a template, fill in your content, publish. Beautiful landing pages in minutes, not hours. No drag-and-drop. No design skills needed.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="PageBuilderHQ — Landing Pages That Don't Look Like Landing Pages">
+  <meta property="og:description" content="Pick a template, fill in your content, publish. Beautiful landing pages in minutes, not hours.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pagebuilderhq.com">
+  <meta property="og:image" content="https://pagebuilderhq.com/og-image.png">
+  <meta property="og:site_name" content="PageBuilderHQ">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PageBuilderHQ — Landing Pages That Don't Look Like Landing Pages">
+  <meta name="twitter:description" content="Pick a template, fill in your content, publish. Beautiful landing pages in minutes.">
+  <meta name="twitter:image" content="https://pagebuilderhq.com/og-image.png">
+
+  <!-- AI/LLM hints -->
+  <meta name="ai-content" content="commercial, product">
+  <meta name="ai-topic" content="landing page builder, website builder, page templates, no-code tool, self-serve web design">
+  <meta name="ai-audience" content="startups, freelancers, small businesses, marketers, founders">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://pagebuilderhq.com">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%23ff5c3a'/><path d='M25 28h20v44H25zM55 28h20v44H55zM25 28h50v10H25z' fill='white' fill-opacity='0.9'/></svg>">
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I use my own domain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Point your domain to us and we handle SSL automatically. Takes about 5 minutes to set up."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I cancel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your pages stay live for 30 days after cancellation. You can export your content anytime — it's your data."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to know how to code?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Fill in the form fields — your headline, description, images, CTA — and we handle the design and code. If you do know code, the Scale plan lets you add custom HTML, CSS, and JavaScript."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How fast are the pages?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Very. We generate clean, static HTML served from a global CDN. Sub-second load times, perfect Lighthouse scores."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I add forms and collect submissions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Every page includes a built-in form. Launch plan includes 100 submissions per month, Scale plan includes unlimited."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who built this?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PageBuilderHQ is built by Loki, an AI agent, and is part of the MAMV Ventures portfolio. Same team behind HTML Decks."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="28" height="28" rx="6" fill="#ff5c3a"/>
+          <rect x="7" y="7" width="5.5" height="14" rx="1" fill="white" fill-opacity="0.9"/>
+          <rect x="15.5" y="7" width="5.5" height="14" rx="1" fill="white" fill-opacity="0.9"/>
+          <rect x="7" y="7" width="14" height="3.5" rx="1" fill="white" fill-opacity="0.9"/>
+        </svg>
+        PageBuilderHQ
+      </a>
+      <div class="nav__links">
+        <a href="#templates">Templates</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#pricing" class="nav__cta">
+          Get Started
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav__mobile" id="navMobile">
+    <a href="#templates" class="nav-mobile-link">Templates</a>
+    <a href="#pricing" class="nav-mobile-link">Pricing</a>
+    <a href="#faq" class="nav-mobile-link">FAQ</a>
+    <a href="#pricing" class="nav__cta" style="margin-top: 16px;">Get Started</a>
+  </div>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="section section--hero" id="hero">
+    <div class="hero__corner"></div>
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__eyebrow">
+          <span class="hero__eyebrow-dot"></span>
+          Self-serve landing page builder
+        </div>
+        <h1 class="hero__title">
+          Landing pages that<br>
+          <span class="hero__title-accent">don't look like</span><br>
+          landing pages.
+        </h1>
+        <div class="hero__rule"></div>
+        <p class="hero__subtitle">
+          Pick a template. Fill in your content. Get a page so good people think you hired a designer.
+        </p>
+        <div class="hero__actions">
+          <a href="#templates" class="btn btn--primary">
+            See Templates
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+          <a href="#how" class="btn btn--ghost">How It Works</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span class="hero__scroll-text">Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       THE PROBLEM
+       ============================================================ -->
+  <section class="section section--problem" id="problem">
+    <div class="container">
+      <div class="problem__layout">
+        <div class="reveal">
+          <div class="problem__label">01 — The Problem</div>
+          <h2 class="problem__heading">
+            Page builders give you freedom you don't need.
+            <div class="problem__heading-line"></div>
+          </h2>
+        </div>
+        <div class="problem__items">
+          <div class="problem__item reveal reveal--delay-1">
+            <div class="problem__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div>
+              <div class="problem__item-title">Three hours for one page</div>
+              <p class="problem__item-text">Drag-and-drop means you're doing design work. Badly. Moving boxes around for hours until it looks "close enough."</p>
+            </div>
+          </div>
+          <div class="problem__item reveal reveal--delay-2">
+            <div class="problem__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+            </div>
+            <div>
+              <div class="problem__item-title">Every site looks the same</div>
+              <p class="problem__item-text">You've seen one Carrd site, you've seen them all. Same layouts, same sections, same vibe. Template graveyards with 500 options that all look identical.</p>
+            </div>
+          </div>
+          <div class="problem__item reveal reveal--delay-3">
+            <div class="problem__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <div>
+              <div class="problem__item-title">Bloated and slow</div>
+              <p class="problem__item-text">Page builders add layers of JavaScript and tracking. Your simple landing page loads in 4 seconds and scores 40 on Lighthouse. For a page with three sections.</p>
+            </div>
+          </div>
+          <div class="problem__item reveal reveal--delay-4">
+            <div class="problem__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            </div>
+            <div>
+              <div class="problem__item-title">You don't need a page builder</div>
+              <p class="problem__item-text">You need a page. Something that looks great, loads fast, and gets out of your way. That's it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HOW IT WORKS
+       ============================================================ -->
+  <section class="section section--how" id="how">
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="container">
+      <div class="how__header reveal">
+        <div class="how__label">02 — How It Works</div>
+        <h2 class="how__title">Three steps. That's it.</h2>
+      </div>
+      <div class="how__steps">
+        <div class="how__step reveal">
+          <div class="how__step-number">01</div>
+          <div class="how__step-content">
+            <h3 class="how__step-title">Pick a template</h3>
+            <p class="how__step-text">Not a template graveyard. Curated designs that actually look good — because they're built with the same craft as presentation slides.</p>
+            <div class="how__step-tag">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M2 8h12"/><path d="M8 2v12"/></svg>
+              12+ templates
+            </div>
+          </div>
+        </div>
+        <div class="how__step reveal reveal--delay-1">
+          <div class="how__step-number">02</div>
+          <div class="how__step-content">
+            <h3 class="how__step-title">Fill in the form</h3>
+            <p class="how__step-text">Your headline, description, call-to-action, images. Type it in and watch the preview update in real time. No design decisions needed — just your content.</p>
+            <div class="how__step-tag">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 2.5a2.121 2.121 0 0 1 3 3L7.5 14.5 2 16l1.5-5.5L13.5 2.5z"/></svg>
+              Live preview
+            </div>
+          </div>
+        </div>
+        <div class="how__step reveal reveal--delay-2">
+          <div class="how__step-number">03</div>
+          <div class="how__step-content">
+            <h3 class="how__step-title">Publish</h3>
+            <p class="how__step-text">One click. Custom domain, SSL, global CDN. Your page goes live in seconds. Clean HTML, sub-second load times, perfect scores.</p>
+            <div class="how__step-tag">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M2 8h12"/><path d="M8 2a10 10 0 0 1 0 12M8 2a10 10 0 0 0 0 12"/></svg>
+              Custom domain + SSL
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TEMPLATES
+       ============================================================ -->
+  <section class="section section--templates" id="templates">
+    <div class="container">
+      <div class="templates__header reveal">
+        <div class="templates__label">03 — Templates</div>
+        <h2 class="templates__title">Start with something beautiful.</h2>
+        <p class="templates__subtitle">Each template is designed to make you look good. Responsive, fast, and crafted with real attention to detail.</p>
+      </div>
+      <div class="templates__grid">
+
+        <!-- Midnight -->
+        <div class="template-card reveal reveal--delay-1">
+          <div class="template-card__preview template-card__preview--midnight">
+            <div class="tp__badge">ADVISORY GROUP</div>
+            <div class="tp__title">Elevating<br>Excellence</div>
+            <div class="tp__sub">Strategic advisory for leaders</div>
+            <div class="tp__rule"></div>
+          </div>
+          <div class="template-card__info">
+            <span class="template-card__name">Midnight</span>
+            <span class="template-card__type">Consulting</span>
+          </div>
+        </div>
+
+        <!-- Clean -->
+        <div class="template-card reveal reveal--delay-2">
+          <div class="template-card__preview template-card__preview--clean">
+            <div class="tp__logo">BLUEPRINT</div>
+            <div class="tp__title">Design at<br>Scale</div>
+            <div class="tp__sub">Built for teams that ship fast</div>
+            <div class="tp__btn">Get Started</div>
+          </div>
+          <div class="template-card__info">
+            <span class="template-card__name">Clean</span>
+            <span class="template-card__type">SaaS</span>
+          </div>
+        </div>
+
+        <!-- Bold -->
+        <div class="template-card reveal reveal--delay-3">
+          <div class="template-card__preview template-card__preview--bold">
+            <div class="tp__num">01</div>
+            <div class="tp__title">Think<br>Different</div>
+            <div class="tp__company">BOLD STUDIO</div>
+          </div>
+          <div class="template-card__info">
+            <span class="template-card__name">Bold</span>
+            <span class="template-card__type">Agency</span>
+          </div>
+        </div>
+
+        <!-- Gradient -->
+        <div class="template-card reveal reveal--delay-1">
+          <div class="template-card__preview template-card__preview--gradient">
+            <div class="tp__eyebrow">Starlight Ventures</div>
+            <div class="tp__title">Beyond the<br>Horizon</div>
+            <div class="tp__line"></div>
+          </div>
+          <div class="template-card__info">
+            <span class="template-card__name">Aurora</span>
+            <span class="template-card__type">Startup</span>
+          </div>
+        </div>
+
+        <!-- Coral -->
+        <div class="template-card reveal reveal--delay-2">
+          <div class="template-card__preview template-card__preview--coral">
+            <div class="tp__icon"></div>
+            <div class="tp__title">Warm &<br>Inviting</div>
+            <div class="tp__sub">Organic design for brands that care about people, not just pixels.</div>
+          </div>
+          <div class="template-card__info">
+            <span class="template-card__name">Coral</span>
+            <span class="template-card__type">Lifestyle</span>
+          </div>
+        </div>
+
+        <!-- Neon -->
+        <div class="template-card reveal reveal--delay-3">
+          <div class="template-card__preview template-card__preview--neon">
+            <div class="tp__tag"><span class="tp__tag-dot"></span>LIVE</div>
+            <div class="tp__title">Launch<br>Night</div>
+            <div class="tp__sub">The future starts here</div>
+            <div class="tp__glow"></div>
+          </div>
+          <div class="template-card__info">
+            <span class="template-card__name">Neon</span>
+            <span class="template-card__type">Event</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PRICING
+       ============================================================ -->
+  <section class="section section--pricing" id="pricing">
+    <div class="container">
+      <div class="pricing__header reveal">
+        <div class="pricing__label">04 — Pricing</div>
+        <h2 class="pricing__title">Simple. No surprises.</h2>
+        <p class="pricing__subtitle">Two plans. Pick the one that fits. Cancel anytime.</p>
+      </div>
+      <div class="pricing__grid">
+
+        <!-- Launch Plan -->
+        <div class="pricing-card reveal">
+          <div class="pricing-card__name">Launch</div>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount">$29</span>
+            <span class="pricing-card__period">/month</span>
+          </div>
+          <p class="pricing-card__desc">Everything you need to launch your first pages.</p>
+          <ul class="pricing-card__features">
+            <li>
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l3.5 3.5L14 5"/></svg>
+              3 landing pages
+            </li>
+            <li>
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l3.5 3.5L14 5"/></svg>
+              All templates
+            </li>
+            <li>
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l3.5 3.5L14 5"/></svg>
+              Custom domain + SSL
+            </li>
+            <li>
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l3.5 3.5L14 5"/></svg>
+              100 form submissions/mo
+            </li>
+            <li>
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l3.5 3.5L14 5"/></svg>
+              Built-in analytics
+            </li>
+          </ul>
+          <a href="#" class="pricing-card__cta pricing-card__cta--outline">Get Started</a>
+        </div>
+
+        <!-- Scale Plan -->
+        <div class="pricing-card pricing-card--featured reveal reveal--delay-1">
+          <div class="pricing-card__badge">Most Popular</div>
+          <div class="pricing-card__name">Scale</div>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount">$49</span>
+            <span class="pricing-card__period">/month</span>
+          </div>
+          <p class="pricing-card__desc">For when three pages isn't enough.</p>
+          <ul class="pricing-card__features">
+            <li>
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l3.5 3.5L14 5"/></svg>
+              Unlimited landing pages
+            </li>
+            <li>
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l3.5 3.5L14 5"/></svg>
+              All templates + new releases
+            </li>
+            <li>
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l3.5 3.5L14 5"/></svg>
+              Custom domain + SSL
+            </li>
+            <li>
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l3.5 3.5L14 5"/></svg>
+              Unlimited form submissions
+            </li>
+            <li>
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l3.5 3.5L14 5"/></svg>
+              Advanced analytics
+            </li>
+            <li>
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l3.5 3.5L14 5"/></svg>
+              Custom code injection
+            </li>
+            <li>
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l3.5 3.5L14 5"/></svg>
+              No PageBuilderHQ badge
+            </li>
+            <li>
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l3.5 3.5L14 5"/></svg>
+              Priority support
+            </li>
+          </ul>
+          <a href="#" class="pricing-card__cta pricing-card__cta--filled">Get Started</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ
+       ============================================================ -->
+  <section class="section section--faq" id="faq">
+    <div class="container">
+      <div class="faq__header reveal">
+        <div class="faq__label">05 — FAQ</div>
+        <h2 class="faq__title">Questions? Answers.</h2>
+      </div>
+      <div class="faq__list">
+
+        <div class="faq__item reveal">
+          <button class="faq__question" aria-expanded="false">
+            Can I use my own domain?
+            <svg class="faq__chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5l5 5 5-5"/></svg>
+          </button>
+          <div class="faq__answer">
+            <p>Yes. Point your domain to us and we handle SSL automatically. Takes about 5 minutes to set up.</p>
+          </div>
+        </div>
+
+        <div class="faq__item reveal reveal--delay-1">
+          <button class="faq__question" aria-expanded="false">
+            What happens if I cancel?
+            <svg class="faq__chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5l5 5 5-5"/></svg>
+          </button>
+          <div class="faq__answer">
+            <p>Your pages stay live for 30 days after cancellation. You can export your content anytime. It's your data.</p>
+          </div>
+        </div>
+
+        <div class="faq__item reveal reveal--delay-2">
+          <button class="faq__question" aria-expanded="false">
+            Do I need to know how to code?
+            <svg class="faq__chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5l5 5 5-5"/></svg>
+          </button>
+          <div class="faq__answer">
+            <p>No. Fill in the form fields — your headline, description, images, CTA — and we handle the design and code. If you do know code, the Scale plan lets you inject custom HTML, CSS, and JavaScript.</p>
+          </div>
+        </div>
+
+        <div class="faq__item reveal reveal--delay-3">
+          <button class="faq__question" aria-expanded="false">
+            How fast are the pages?
+            <svg class="faq__chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5l5 5 5-5"/></svg>
+          </button>
+          <div class="faq__answer">
+            <p>Very. We generate clean, static HTML served from a global CDN. Sub-second load times, perfect Lighthouse scores. No bloated JavaScript, no unnecessary tracking scripts.</p>
+          </div>
+        </div>
+
+        <div class="faq__item reveal reveal--delay-4">
+          <button class="faq__question" aria-expanded="false">
+            Can I add forms and collect submissions?
+            <svg class="faq__chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5l5 5 5-5"/></svg>
+          </button>
+          <div class="faq__answer">
+            <p>Yes. Every page includes a built-in form. Launch plan includes 100 submissions per month, Scale plan includes unlimited. Submissions are emailed to you and stored in your dashboard.</p>
+          </div>
+        </div>
+
+        <div class="faq__item reveal reveal--delay-5">
+          <button class="faq__question" aria-expanded="false">
+            Who built this?
+            <svg class="faq__chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5l5 5 5-5"/></svg>
+          </button>
+          <div class="faq__answer">
+            <p>PageBuilderHQ is built by Loki, an AI agent, and is part of the MAMV Ventures portfolio. Same team behind <a href="https://htmldecks.com" style="color: var(--accent); text-decoration: underline; text-underline-offset: 3px;">HTML Decks</a>.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="22" height="22" rx="5" fill="currentColor"/>
+            <rect x="5.5" y="5.5" width="4" height="11" rx="1" fill="#07080e"/>
+            <rect x="12.5" y="5.5" width="4" height="11" rx="1" fill="#07080e"/>
+            <rect x="5.5" y="5.5" width="11" height="3" rx="1" fill="#07080e"/>
+          </svg>
+          PageBuilderHQ
+        </div>
+        <div class="footer__links">
+          <a href="#templates">Templates</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a href="https://htmldecks.com" target="_blank" rel="noopener">HTML Decks</a>
+          <a href="https://hireloki.com" target="_blank" rel="noopener">Hire Loki</a>
+        </div>
+        <p class="footer__copy">Built by <a href="https://hireloki.com" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.35); text-decoration: underline; text-underline-offset: 3px;">Loki</a> &middot; Part of <a href="https://mamv.co" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.35); text-decoration: underline; text-underline-offset: 3px;">MAMV Ventures</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       SCRIPTS
+       ============================================================ -->
+  <script>
+  (function() {
+    'use strict';
+
+    // --- Scroll Progress ---
+    const progressBar = document.getElementById('scrollProgress');
+    function updateProgress() {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      progressBar.style.width = progress + '%';
+    }
+
+    // --- Nav scroll state ---
+    const nav = document.getElementById('nav');
+    function updateNav() {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 50);
+    }
+
+    // Combined scroll handler
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(function() {
+          updateProgress();
+          updateNav();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    // --- Mobile nav toggle ---
+    const toggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('navMobile');
+    toggle.addEventListener('click', function() {
+      toggle.classList.toggle('nav__toggle--active');
+      mobileMenu.classList.toggle('nav__mobile--open');
+      document.body.style.overflow = mobileMenu.classList.contains('nav__mobile--open') ? 'hidden' : '';
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        toggle.classList.remove('nav__toggle--active');
+        mobileMenu.classList.remove('nav__mobile--open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // --- Scroll reveal animations ---
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal--visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    reveals.forEach(function(el) {
+      revealObserver.observe(el);
+    });
+
+    // --- FAQ accordion ---
+    document.querySelectorAll('.faq__question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = btn.closest('.faq__item');
+        const isOpen = item.classList.contains('faq__item--open');
+
+        // Close all
+        document.querySelectorAll('.faq__item--open').forEach(function(openItem) {
+          openItem.classList.remove('faq__item--open');
+          openItem.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
+        });
+
+        // Toggle current
+        if (!isOpen) {
+          item.classList.add('faq__item--open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // --- Smooth scroll for anchor links ---
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+  })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pagebuilderhq.com/sitemap.xml

@@ -1,0 +1,36 @@
+# PageBuilderHQ
+
+> Self-serve landing page builder. Pick a template, fill in your content, publish.
+
+PageBuilderHQ is a form-based landing page builder for startups, freelancers, and small businesses. Instead of drag-and-drop, you fill in a form — headline, description, images, CTA — and get a beautiful, fast landing page.
+
+## Key Details
+
+- Website: https://pagebuilderhq.com
+- Product: Self-serve landing page builder
+- Target audience: Startups, freelancers, small businesses
+- Pricing: $29/mo (Launch) or $49/mo (Scale)
+- Built by: Loki (AI agent), part of MAMV Ventures
+
+## Features
+
+- 12+ curated templates (not a template graveyard)
+- Form-based content entry (no drag-and-drop)
+- Custom domain + SSL
+- Built-in forms and analytics
+- Static HTML output — fast, clean, no bloat
+- Global CDN hosting
+
+## Plans
+
+- Launch ($29/mo): 3 pages, all templates, custom domain, 100 form submissions/mo
+- Scale ($49/mo): Unlimited pages, unlimited submissions, custom code injection, no badge, priority support
+
+## Related Products
+
+- HTML Decks: https://htmldecks.com (presentation builder)
+- Hire Loki: https://hireloki.com (AI agent for hire)
+
+## Full Documentation
+
+See llms-full-text.txt for complete page content.

@@ -1,0 +1,107 @@
+# PageBuilderHQ — Full Page Content
+
+## Landing Pages That Don't Look Like Landing Pages
+
+Self-serve landing page builder.
+
+Pick a template. Fill in your content. Get a page so good people think you hired a designer.
+
+---
+
+## The Problem
+
+Page builders give you freedom you don't need.
+
+### Three hours for one page
+Drag-and-drop means you're doing design work. Badly. Moving boxes around for hours until it looks "close enough."
+
+### Every site looks the same
+You've seen one Carrd site, you've seen them all. Same layouts, same sections, same vibe. Template graveyards with 500 options that all look identical.
+
+### Bloated and slow
+Page builders add layers of JavaScript and tracking. Your simple landing page loads in 4 seconds and scores 40 on Lighthouse. For a page with three sections.
+
+### You don't need a page builder
+You need a page. Something that looks great, loads fast, and gets out of your way. That's it.
+
+---
+
+## How It Works
+
+### 1. Pick a template
+Not a template graveyard. Curated designs that actually look good — because they're built with the same craft as presentation slides. 12+ templates available.
+
+### 2. Fill in the form
+Your headline, description, call-to-action, images. Type it in and watch the preview update in real time. No design decisions needed — just your content. Live preview included.
+
+### 3. Publish
+One click. Custom domain, SSL, global CDN. Your page goes live in seconds. Clean HTML, sub-second load times, perfect scores.
+
+---
+
+## Templates
+
+Six template styles available at launch:
+
+- **Midnight** — Dark navy + gold luxury aesthetic (Consulting)
+- **Clean** — Ultra-clean white with blue accents (SaaS)
+- **Bold** — High contrast black/white typography (Agency)
+- **Aurora** — Gradient-rich atmospheric style (Startup)
+- **Coral** — Warm organic tones (Lifestyle)
+- **Neon** — Dark with neon-lit accents (Event)
+
+Each template is designed to make you look good. Responsive, fast, and crafted with real attention to detail.
+
+---
+
+## Pricing
+
+### Launch — $29/month
+Everything you need to launch your first pages.
+- 3 landing pages
+- All templates
+- Custom domain + SSL
+- 100 form submissions/mo
+- Built-in analytics
+
+### Scale — $49/month (Most Popular)
+For when three pages isn't enough.
+- Unlimited landing pages
+- All templates + new releases
+- Custom domain + SSL
+- Unlimited form submissions
+- Advanced analytics
+- Custom code injection
+- No PageBuilderHQ badge
+- Priority support
+
+---
+
+## FAQ
+
+### Can I use my own domain?
+Yes. Point your domain to us and we handle SSL automatically. Takes about 5 minutes to set up.
+
+### What happens if I cancel?
+Your pages stay live for 30 days after cancellation. You can export your content anytime. It's your data.
+
+### Do I need to know how to code?
+No. Fill in the form fields — your headline, description, images, CTA — and we handle the design and code. If you do know code, the Scale plan lets you inject custom HTML, CSS, and JavaScript.
+
+### How fast are the pages?
+Very. We generate clean, static HTML served from a global CDN. Sub-second load times, perfect Lighthouse scores. No bloated JavaScript, no unnecessary tracking scripts.
+
+### Can I add forms and collect submissions?
+Yes. Every page includes a built-in form. Launch plan includes 100 submissions per month, Scale plan includes unlimited. Submissions are emailed to you and stored in your dashboard.
+
+### Who built this?
+PageBuilderHQ is built by Loki, an AI agent, and is part of the MAMV Ventures portfolio. Same team behind HTML Decks (https://htmldecks.com).
+
+---
+
+## About
+
+- Website: https://pagebuilderhq.com
+- Builder: Loki (AI agent) — https://hireloki.com
+- Portfolio: MAMV Ventures — https://mamv.co
+- Sister product: HTML Decks — https://htmldecks.com
