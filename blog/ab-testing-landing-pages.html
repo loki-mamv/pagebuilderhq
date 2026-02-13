@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A/B Testing Landing Pages: The Complete Beginner's Guide | PageBuilderHQ</title>
+  <meta name="description" content="Learn how to A/B test landing pages effectively. Step-by-step guide covering what to test, tools to use, sample sizes, and how to interpret results for better conversions.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pagebuilderhq.com/blog/ab-testing-landing-pages">
+  <meta property="og:title" content="A/B Testing Landing Pages: The Complete Beginner's Guide">
+  <meta property="og:description" content="Learn how to A/B test landing pages effectively. Step-by-step guide for better conversions.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://pagebuilderhq.com/blog/ab-testing-landing-pages">
+  <meta property="og:site_name" content="PageBuilderHQ">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%23ff5c3a'/><path d='M25 28h20v44H25zM55 28h20v44H55zM25 28h50v10H25z' fill='white' fill-opacity='0.9'/></svg>">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "A/B Testing Landing Pages: The Complete Beginner's Guide",
+    "description": "Learn how to A/B test landing pages effectively. Step-by-step guide covering what to test, tools to use, sample sizes, and how to interpret results.",
+    "datePublished": "2026-02-04",
+    "dateModified": "2026-02-04",
+    "author": {"@type": "Organization", "name": "PageBuilderHQ", "url": "https://pagebuilderhq.com"},
+    "publisher": {"@type": "Organization", "name": "PageBuilderHQ", "url": "https://pagebuilderhq.com"},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://pagebuilderhq.com/blog/ab-testing-landing-pages"}
+  }
+  </script>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root { --bg: #07080e; --surface: #0f1117; --border: rgba(255,255,255,0.08); --text: rgba(255,255,255,0.85); --text-muted: rgba(255,255,255,0.5); --accent: #ff5c3a; --accent-hover: #ff7a5e; --font-body: 'DM Sans', sans-serif; --font-heading: 'Space Grotesk', sans-serif; --max-width: 720px; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.7; font-size: 17px; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; } a:hover { color: var(--accent-hover); }
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 18px 24px; background: rgba(7,8,14,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav__inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .nav__logo { display: flex; align-items: center; gap: 10px; font-family: var(--font-heading); font-weight: 700; font-size: 18px; color: #fff; text-decoration: none; }
+    .nav__logo svg { width: 28px; height: 28px; }
+    .nav__links { display: flex; align-items: center; gap: 28px; }
+    .nav__links a { color: var(--text-muted); font-size: 14px; font-weight: 500; text-decoration: none; } .nav__links a:hover { color: #fff; }
+    .nav__cta { background: var(--accent); color: #fff !important; padding: 8px 18px; border-radius: 8px; font-size: 14px; font-weight: 600; }
+    .article { max-width: var(--max-width); margin: 0 auto; padding: 120px 24px 60px; }
+    .article__breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; } .article__breadcrumb a { color: var(--text-muted); text-decoration: underline; text-underline-offset: 3px; }
+    .article__category { display: inline-block; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent); margin-bottom: 16px; }
+    .article__title { font-family: var(--font-heading); font-size: clamp(32px, 5vw, 44px); font-weight: 700; line-height: 1.15; color: #fff; margin-bottom: 16px; }
+    .article__meta { font-size: 14px; color: var(--text-muted); margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid var(--border); }
+    .article__content h2 { font-family: var(--font-heading); font-size: 26px; font-weight: 700; color: #fff; margin: 48px 0 16px; line-height: 1.3; }
+    .article__content h3 { font-family: var(--font-heading); font-size: 20px; font-weight: 600; color: #fff; margin: 36px 0 12px; }
+    .article__content p { margin-bottom: 20px; }
+    .article__content ul, .article__content ol { margin: 0 0 20px 24px; } .article__content li { margin-bottom: 8px; }
+    .article__content blockquote { border-left: 3px solid var(--accent); padding: 16px 24px; margin: 28px 0; background: var(--surface); border-radius: 0 8px 8px 0; font-style: italic; color: var(--text-muted); }
+    .article__content strong { color: #fff; font-weight: 600; }
+    .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 40px; margin: 48px 0; text-align: center; }
+    .cta-box__title { font-family: var(--font-heading); font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .cta-box__text { color: var(--text-muted); margin-bottom: 20px; font-size: 15px; }
+    .cta-box__btn { display: inline-block; background: var(--accent); color: #fff; padding: 12px 28px; border-radius: 8px; font-weight: 600; font-size: 15px; } .cta-box__btn:hover { background: var(--accent-hover); color: #fff; }
+    .footer { border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; color: var(--text-muted); font-size: 14px; } .footer a { color: var(--text-muted); text-decoration: underline; text-underline-offset: 3px; }
+    @media (max-width: 600px) { .nav__links { display: none; } .article { padding: 100px 18px 40px; } .article__title { font-size: 28px; } .cta-box { padding: 28px 20px; } }
+  </style>
+</head>
+<body>
+  <nav class="nav"><div class="nav__inner"><a href="https://pagebuilderhq.com" class="nav__logo"><svg viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#ff5c3a"/><rect x="7" y="7" width="5.5" height="14" rx="1" fill="white" fill-opacity="0.9"/><rect x="15.5" y="7" width="5.5" height="14" rx="1" fill="white" fill-opacity="0.9"/><rect x="7" y="7" width="14" height="3.5" rx="1" fill="white" fill-opacity="0.9"/></svg>PageBuilderHQ</a><div class="nav__links"><a href="https://pagebuilderhq.com/blog">Blog</a><a href="https://pagebuilderhq.com#templates">Templates</a><a href="https://pagebuilderhq.com#pricing">Pricing</a><a href="https://pagebuilderhq.com#pricing" class="nav__cta">Get Started</a></div></div></nav>
+
+  <article class="article">
+    <div class="article__breadcrumb"><a href="https://pagebuilderhq.com">Home</a> → <a href="https://pagebuilderhq.com/blog">Blog</a> → A/B Testing Landing Pages</div>
+    <span class="article__category">Landing Page Optimization</span>
+    <h1 class="article__title">A/B Testing Landing Pages: The Complete Beginner's Guide</h1>
+    <div class="article__meta">February 4, 2026 · 10 min read</div>
+
+    <div class="article__content">
+      <p><strong>A/B testing landing pages</strong> is one of the highest-ROI activities in digital marketing. Instead of guessing what works, you run controlled experiments and let real visitor behavior tell you. A single well-executed A/B test can lift your conversion rate by 20%, 50%, or even more. In this guide, you'll learn exactly how to plan, execute, and analyze landing page A/B tests — even if you've never run one before.</p>
+
+      <h2>What Is A/B Testing?</h2>
+      <p>A/B testing (also called split testing) is a method where you create two versions of a page — Version A (the control) and Version B (the variant) — and split your traffic evenly between them. You then measure which version performs better based on a specific goal, like form submissions, button clicks, or purchases.</p>
+      <p>The key principle is isolation. You change one element between the two versions so you can confidently attribute any difference in performance to that specific change. Change your headline? You now know whether Headline A or Headline B converts better. Change the button color and the headline at the same time? You don't know which change caused the result.</p>
+
+      <h2>What Should You A/B Test?</h2>
+      <p>Not everything is worth testing. Focus on elements that have the biggest potential impact on conversions. Here's a priority list:</p>
+
+      <h3>High Impact: Test These First</h3>
+      <ul>
+        <li><strong>Headlines:</strong> The most-read element on any page. A headline change can swing conversion rates dramatically. Test different angles — benefit-focused vs. feature-focused, question vs. statement, short vs. long.</li>
+        <li><strong>Call-to-Action (CTA):</strong> Button text, color, size, and placement all affect click-through rates. "Start Free Trial" vs. "Get Started Free" vs. "Try It Now" — these small differences matter more than you'd think.</li>
+        <li><strong>Hero section layout:</strong> Test different above-the-fold arrangements. Split layout vs. centered. With product screenshot vs. without. Video hero vs. static image.</li>
+        <li><strong>Form length:</strong> Fewer fields generally mean higher completion rates, but not always. Test a 3-field form against a 5-field form to see what works for your audience.</li>
+      </ul>
+
+      <h3>Medium Impact: Test After the Basics</h3>
+      <ul>
+        <li><strong>Social proof placement:</strong> Testimonials above the fold vs. below. Customer logos vs. review snippets.</li>
+        <li><strong>Page length:</strong> Short, punchy pages vs. longer, more detailed pages. The right length depends on your audience and the complexity of what you're selling.</li>
+        <li><strong>Images and visuals:</strong> Real photos vs. illustrations. People photos vs. product screenshots.</li>
+      </ul>
+
+      <h3>Lower Impact (But Still Worth Testing)</h3>
+      <ul>
+        <li>Button colors (yes, it matters, but less than you think)</li>
+        <li>Font choices and sizes</li>
+        <li>Background colors and section dividers</li>
+        <li>Navigation presence vs. no navigation</li>
+      </ul>
+
+      <h2>How to Set Up Your First A/B Test</h2>
+
+      <h3>Step 1: Define Your Hypothesis</h3>
+      <p>Every good test starts with a hypothesis. Don't just test randomly — have a reason. A good hypothesis follows this format: "If I change [element] from [current] to [new], then [metric] will improve because [reason]."</p>
+      <p>Example: "If I change the headline from 'Project Management Software' to 'Finish Projects 2x Faster,' then sign-ups will increase because the new headline is benefit-focused rather than descriptive."</p>
+
+      <h3>Step 2: Calculate Your Sample Size</h3>
+      <p>Running a test with too little traffic gives you unreliable results. Before starting, calculate how many visitors each variant needs. Factors that affect sample size:</p>
+      <ul>
+        <li><strong>Baseline conversion rate:</strong> If your current page converts at 5%, you need fewer visitors than if it converts at 0.5%.</li>
+        <li><strong>Minimum detectable effect:</strong> How big of an improvement are you looking for? A 50% relative lift needs fewer visitors to detect than a 10% lift.</li>
+        <li><strong>Statistical significance:</strong> Most tests target 95% confidence, meaning there's only a 5% chance the result is due to random chance.</li>
+      </ul>
+      <p>Use a free sample size calculator (Google "A/B test sample size calculator") to get your number. If you need 1,000 visitors per variant and your page gets 200 visitors per day, your test needs to run for about 10 days.</p>
+
+      <h3>Step 3: Create Your Variant</h3>
+      <p>Make exactly one change. If you're testing the headline, everything else stays identical — same images, same CTA, same layout, same page speed. This is critical for getting clean results.</p>
+
+      <h3>Step 4: Split Traffic Evenly</h3>
+      <p>Use your testing tool to split traffic 50/50 between the control and variant. Most tools handle this automatically. Make sure the split is truly random and that each visitor consistently sees the same version throughout their session.</p>
+
+      <h3>Step 5: Wait for Statistical Significance</h3>
+      <p>This is where most people get impatient. Don't call a test after one day just because Variant B is "winning." Wait until you've hit your calculated sample size and your testing tool reports at least 95% statistical significance. Calling tests early leads to false positives.</p>
+
+      <h3>Step 6: Analyze and Implement</h3>
+      <p>Once the test reaches significance, analyze the results. If the variant wins, implement it as the new control and move on to your next test. If the control wins, that's still valuable — you've learned something about your audience.</p>
+
+      <h2>Common A/B Testing Mistakes</h2>
+
+      <h3>Testing Too Many Things at Once</h3>
+      <p>If you change the headline, the CTA, and the hero image simultaneously, you'll never know which change caused the result. Test one thing at a time. If you want to test multiple elements, use multivariate testing — but be aware that it requires significantly more traffic.</p>
+
+      <h3>Ending Tests Too Early</h3>
+      <p>Early results are unreliable. A test might show a 40% improvement after 100 visitors, then flatten to 2% after 1,000. Commit to running the full test duration, even if the results look decisive early on.</p>
+
+      <h3>Not Accounting for External Factors</h3>
+      <p>Traffic quality varies by day of week, time of day, and season. A test that runs only on weekdays might give different results than one that includes weekends. Run tests for at least one full week to account for these patterns.</p>
+
+      <h3>Testing Trivial Changes</h3>
+      <p>Testing whether your button should be "Buy Now" vs. "Buy Now!" (with an exclamation point) is a waste of time. Focus on changes that could meaningfully impact visitor behavior. Big swings come from big changes — different headlines, different offers, different layouts.</p>
+
+      <h3>Ignoring Segment Differences</h3>
+      <p>Your overall results might hide important differences between segments. Mobile visitors might prefer Version A while desktop visitors prefer Version B. New visitors vs. returning visitors might respond differently. Most testing tools let you segment results — use that feature.</p>
+
+      <h2>A/B Testing Tools</h2>
+      <p>You don't need expensive software to start A/B testing. Here are options at every budget level:</p>
+      <ul>
+        <li><strong>Google Optimize (free):</strong> Google's own tool. Easy setup if you already use Google Analytics. Great for beginners.</li>
+        <li><strong>VWO ($199+/month):</strong> Visual editor, heatmaps, and session recordings alongside A/B testing.</li>
+        <li><strong>Optimizely (enterprise pricing):</strong> The industry standard for larger organizations with complex testing needs.</li>
+        <li><strong>Unbounce ($99+/month):</strong> Landing page builder with built-in A/B testing — test different page variants directly.</li>
+      </ul>
+
+      <h2>What to Do After the Test</h2>
+      <p>A winning test isn't the end — it's the beginning of the next test. The most successful landing pages are the result of dozens of iterative tests, each building on the last.</p>
+      <p>Keep a testing log. Document every test: what you changed, your hypothesis, the result, and what you learned. Over time, this becomes an invaluable playbook for what works with your specific audience.</p>
+      <p>Remember: A/B testing isn't about finding the "perfect" page. It's about continuously improving. A 10% improvement from one test, compounded across a dozen tests, can double or triple your conversion rate.</p>
+
+      <div class="cta-box">
+        <div class="cta-box__title">Start with a High-Converting Base</div>
+        <div class="cta-box__text">PageBuilderHQ templates are built on proven conversion patterns. Start with a strong foundation, then A/B test your way to even better results.</div>
+        <a href="https://pagebuilderhq.com#templates" class="cta-box__btn">See Templates →</a>
+      </div>
+    </div>
+  </article>
+  <footer class="footer"><p>© 2026 <a href="https://pagebuilderhq.com">PageBuilderHQ</a>. Built by <a href="https://hireloki.com">Loki</a> · Part of <a href="https://mamv.co">MAMV Ventures</a></p></footer>
+</body>
+</html>
